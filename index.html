@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint C1 Lab 2</title>
+    <!--Guest Modules-->
+    <script src="guest.js" type="module" defer></script>
+    <script src="guestCounter.js" type="module" defer></script>
+    <!--Animal Modules-->
+    <script src="animal.js" type="module" defer></script>
+    <script src="server.js" defer></script>
+    </head>
+    <body>
+<!-- Form for admitting guests -->
+    <div>
+        <form id="guestForm">
+            <label for="guestName">Guest Name:</label>
+            <input type="text" id="guestName" name="guestName" required>        
+            <button type="submit">Admit Guest</button>
+        </form>
+        <!-- Display of total number of guests -->
+        <h2>Total Guests: <span id="guestCount">0</span></h2>
+        <!-- Display message to end user about guest capacity -->
+        <p id="message"></p>
+    </div>
+    <div>
+        <form id="animalForm">
+            <h2>Add Animal To Zoo</h2>
+            <label for="animalName">Animal Name:</label>
+            <input type="text" id="animalName" name="animalName" required> 
+
+            <label for="animalSpecies">Animal Species:</label>
+            <input type="text" id="animalSpecies" name="animalSpecies" required>
+
+            <label for="animalAge">Animal Age:</label>
+            <input type="text" id="animalAge" name="animalAge" required>
+
+            <label for="animalGender">Animal Gender:</label>
+            <input type="text" id="animalGender" name="animalgender" required>
+
+            <div id="location"></div>
+
+            <button type="submit" id="addAnimalButton">Add Animal</button>
+            <div id="pregBtn">
+            </div>
+        </form>
+        <h1>Animal List</h1>
+        <h2 id="listCount"></h2>
+        <label for="searchAnimal">Find Animal:</label>
+        <input type="text" id="searchAnimal" name="searchAnimal">
+        <div id="animalCards">
+        </div>
+        <p id="animalMessage"></p>
+    </div>
+
+    </body>
+
+</html>
